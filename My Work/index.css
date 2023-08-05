@@ -1,0 +1,487 @@
+body {
+    background: linear-gradient(180deg, #00C0FC 0%, rgba(36, 0, 255, 0.74) 100%);
+    height: auto;
+    width: auto;
+    overflow: hidden;
+}
+
+.rectangle {
+    display: flex;
+    width: 95%;
+    height: 100px;
+    background-color: white;
+    border-radius: 15px;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+    margin: 20px auto;
+}
+
+.font_1 {
+    padding: 1.5%;
+    color: #000;
+    font-family: 'Fugaz One', cursive;
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 400;
+}
+
+.menu ul {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+.menu li {
+    margin-right: 20px;
+}
+
+.menu li:last-child {
+    margin-right: 0;
+}
+
+.menu li a {
+    text-decoration: none;
+    color: #000;
+    font-family: 'Fugaz One', cursive;
+    font-size: 20px;
+}
+
+.menu li a.active {
+    color: #00C0FC;
+}
+
+.menu li a:hover {
+    color: #00C0FC;
+}
+
+.container {
+    display: none; /* Hide the container by default on larger screens */
+}
+
+#font_2 {
+    margin-top: 0px;
+    margin-left: auto;
+    margin-right: auto;
+    color: #FFF;
+    text-align: center;
+    font-family: Fugaz One;
+    font-size: 160px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+/* Media query for mobile devices */
+@media (max-width: 768px) {
+    
+    body{
+        overflow: hidden;
+    }
+
+    .rectangle {
+        width: 90%; /* Adjust width for mobile */
+    }
+
+    .font_1{
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .container {
+        display: inline-block;
+        cursor: pointer;
+    }
+
+    .container.change .bar1 {
+    transform: translate(0, 11px) rotate(-45deg);
+}
+
+.container.change .bar2 {
+    opacity: 0;
+}
+
+.container.change .bar3 {
+    transform: translate(0, -11px) rotate(45deg);
+}
+
+.container.change + .menu {
+    display: block;
+}
+
+      
+    .bar1, .bar2, .bar3 {
+        margin-right: 20px;
+        width: 35px;
+        height: 5px;
+        background-color: #333;
+        margin: 6px 0;
+        transition: 0.4s;
+      }
+      
+    .change .bar1 {
+        transform: translate(0, 11px) rotate(-45deg);
+      }
+      
+    .change .bar2 {opacity: 0;}
+      
+    .change .bar3 {
+        transform: translate(0, -11px) rotate(45deg);
+      }
+      
+      .menu {
+        display: none;
+    }
+    
+    /* Add this CSS to style the links inside the mobile menu */
+    .menu li {
+        text-align: center;
+    }
+    
+    .menu li a {
+        display: block;
+        padding: 10px;
+        font-size: 18px; /* Adjust font size for mobile */
+        color: #000;
+        text-decoration: none; /* Add this to remove the underline */
+        font-family: 'Fugaz One', cursive;
+        margin-right: 10px;
+    }
+
+    #font_2{
+        font-size: 125px;
+    }
+    
+    .header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px;
+    }
+
+    .container {
+        order: -1;
+        margin-bottom: 5px; /* Add space below the menu icon */
+    }
+
+    .menu {
+        display: none;
+        position: absolute;
+        top: 125px; /* Add spacing here */
+        right: 26px; /* Align the menu to the right */
+        background-color: white;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        border-radius: 5px;
+        z-index: 1000;
+    }
+
+    .menu.active {
+        display: block;
+    }
+
+    .menu ul {
+        display: flex;
+        flex-direction: column; /* Change to horizontal display */
+        align-items: flex; /* Align menu items to the right */
+        margin-left: 0;
+        margin-right: 0;
+        padding: 20px;
+    }
+
+    .menu li {
+        margin-bottom: 15px;
+    }
+
+    .menu li:last-child {
+        margin-bottom: 0;
+    }
+
+    .menu li a {
+        display: block;
+        padding: 10px;
+        color: #333;
+        text-decoration: none;
+        transition: background-color 0.2s ease;
+    }
+
+    .menu li a:hover {
+        background-color: #ddd;
+    }
+    
+}
+
+@media (max-width: 667px) {
+    
+    body{
+        overflow: hidden;
+    }
+
+    .rectangle {
+        width: 90%; /* Adjust width for mobile */
+    }
+
+    .font_1{
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .container {
+        display: inline-block;
+        cursor: pointer;
+    }
+
+    .container.change .bar1 {
+    transform: translate(0, 11px) rotate(-45deg);
+}
+
+.container.change .bar2 {
+    opacity: 0;
+}
+
+.container.change .bar3 {
+    transform: translate(0, -11px) rotate(45deg);
+}
+
+.container.change + .menu {
+    display: block;
+}
+
+      
+    .bar1, .bar2, .bar3 {
+        margin-right: 20px;
+        width: 35px;
+        height: 5px;
+        background-color: #333;
+        margin: 6px 0;
+        transition: 0.4s;
+      }
+      
+    .change .bar1 {
+        transform: translate(0, 11px) rotate(-45deg);
+      }
+      
+    .change .bar2 {opacity: 0;}
+      
+    .change .bar3 {
+        transform: translate(0, -11px) rotate(45deg);
+      }
+      
+      .menu {
+        display: none;
+    }
+    
+    /* Add this CSS to style the links inside the mobile menu */
+    .menu li {
+        text-align: center;
+    }
+    
+    .menu li a {
+        display: block;
+        padding: 10px;
+        font-size: 18px; /* Adjust font size for mobile */
+        color: #000;
+        text-decoration: none; /* Add this to remove the underline */
+        font-family: 'Fugaz One', cursive;
+        margin-right: 10px;
+    }
+
+    #font_2{
+        font-size: 90px;
+    }
+    
+    .header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px;
+    }
+
+    .container {
+        order: -1;
+        margin-bottom: 5px; /* Add space below the menu icon */
+    }
+
+    .menu {
+        display: none;
+        position: absolute;
+        top: 125px; /* Add spacing here */
+        right: 26px; /* Align the menu to the right */
+        background-color: white;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        border-radius: 5px;
+        z-index: 1000;
+    }
+
+    .menu.active {
+        display: block;
+    }
+
+    .menu ul {
+        display: flex;
+        flex-direction: column; /* Change to horizontal display */
+        align-items: flex; /* Align menu items to the right */
+        margin-left: 0;
+        margin-right: 0;
+        padding: 20px;
+    }
+
+    .menu li {
+        margin-bottom: 15px;
+    }
+
+    .menu li:last-child {
+        margin-bottom: 0;
+    }
+
+    .menu li a {
+        display: block;
+        padding: 10px;
+        color: #333;
+        text-decoration: none;
+        transition: background-color 0.2s ease;
+    }
+
+    .menu li a:hover {
+        background-color: #ddd;
+    }
+    
+}
+
+@media (max-width: 500px) {
+    
+    body{
+        overflow: hidden;
+    }
+
+    .rectangle {
+        width: 90%; /* Adjust width for mobile */
+    }
+
+    .font_1{
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .container {
+        display: inline-block;
+        cursor: pointer;
+    }
+
+    .container.change .bar1 {
+    transform: translate(0, 11px) rotate(-45deg);
+}
+
+.container.change .bar2 {
+    opacity: 0;
+}
+
+.container.change .bar3 {
+    transform: translate(0, -11px) rotate(45deg);
+}
+
+.container.change + .menu {
+    display: block;
+}
+
+      
+    .bar1, .bar2, .bar3 {
+        margin-right: 20px;
+        width: 35px;
+        height: 5px;
+        background-color: #333;
+        margin: 6px 0;
+        transition: 0.4s;
+      }
+      
+    .change .bar1 {
+        transform: translate(0, 11px) rotate(-45deg);
+      }
+      
+    .change .bar2 {opacity: 0;}
+      
+    .change .bar3 {
+        transform: translate(0, -11px) rotate(45deg);
+      }
+      
+      .menu {
+        display: none;
+    }
+    
+    /* Add this CSS to style the links inside the mobile menu */
+    .menu li {
+        text-align: center;
+    }
+    
+    .menu li a {
+        display: block;
+        padding: 10px;
+        font-size: 18px; /* Adjust font size for mobile */
+        color: #000;
+        text-decoration: none; /* Add this to remove the underline */
+        font-family: 'Fugaz One', cursive;
+        margin-right: 10px;
+    }
+
+    #font_2{
+        font-size: 80px;
+        margin-top: 30px;
+    }
+    
+    .header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px;
+    }
+
+    .container {
+        order: -1;
+        margin-bottom: 5px; /* Add space below the menu icon */
+    }
+
+    .menu {
+        display: none;
+        position: absolute;
+        top: 125px; /* Add spacing here */
+        right: 26px; /* Align the menu to the right */
+        background-color: white;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        border-radius: 5px;
+        z-index: 1000;
+    }
+
+    .menu.active {
+        display: block;
+    }
+
+    .menu ul {
+        display: flex;
+        flex-direction: column; /* Change to horizontal display */
+        align-items: flex; /* Align menu items to the right */
+        margin-left: 0;
+        margin-right: 0;
+        padding: 20px;
+    }
+
+    .menu li {
+        margin-bottom: 15px;
+    }
+
+    .menu li:last-child {
+        margin-bottom: 0;
+    }
+
+    .menu li a {
+        display: block;
+        padding: 10px;
+        color: #333;
+        text-decoration: none;
+        transition: background-color 0.2s ease;
+    }
+
+    .menu li a:hover {
+        background-color: #ddd;
+    }
+    
+}
